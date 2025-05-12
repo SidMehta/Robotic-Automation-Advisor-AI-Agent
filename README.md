@@ -1,4 +1,4 @@
-# 🤖 Robotic Process Advisor AI Agent [MIT Class Project]
+# 🤖 Robotic Process Advisor AI Agent [MIT Lab Project]
 
 An agentic‑AI web app that watches an industrial‑process video, plans robot‑automation options with LLMs, and delivers a data‑driven cost‑benefit recommendation.
 
