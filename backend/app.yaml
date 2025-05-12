@@ -1,0 +1,32 @@
+runtime: python310
+entrypoint: gunicorn -b :$PORT app:app
+
+instance_class: F1 # Or adjust as needed
+
+automatic_scaling:
+  target_cpu_utilization: 0.65
+  min_instances: 0 # Set to 1 for lower latency if needed
+  max_instances: 2
+  min_pending_latency: 30ms
+  max_pending_latency: automatic
+  max_concurrent_requests: 80
+
+env_variables:
+  # Add any non-secret env vars here if needed
+  pass
+
+secret_env_variables:
+  # GOOGLE_APPLICATION_CREDENTIALS:
+  #   secret: GOOGLE_APPLICATION_CREDENTIALS # Assumes your service account key is stored as a secret
+  #   version: 'latest'
+  # --- Add this section ---
+  GEMINI_API_KEY:
+    secret: GEMINI_API_KEY1 # Matches the secret name we created
+    version: 'latest'
+  # -----------------------
+
+handlers:
+  - url: /api/.*
+    script: auto
+
+# Add other handlers if needed, e.g., for static files if backend serves any directly

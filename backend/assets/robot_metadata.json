@@ -1,0 +1,32 @@
+{
+  "atlas_convex_hull.urdf": {
+    "purchase_price": 250000,
+    "op_cost_per_min": 0.30,
+    "end_effector_cost_percent": 0.25
+  },
+  "jvrc1.urdf": {
+    "purchase_price": 150000,
+    "op_cost_per_min": 0.20,
+    "end_effector_cost_percent": 0.25
+  },
+  "atlas_v4_with_multisense.urdf": {
+    "purchase_price": 255000,
+    "op_cost_per_min": 0.32,
+    "end_effector_cost_percent": 0.25
+  },
+  "x1.urdf": {
+    "purchase_price": 75000,
+    "op_cost_per_min": 0.15,
+    "end_effector_cost_percent": 0.20
+  },
+  "digit_model.urdf": {
+    "purchase_price": 200000,
+    "op_cost_per_min": 0.22,
+    "end_effector_cost_percent": 0.15
+  },
+  "GGC_TestModel_rx78_20170112.urdf": {
+    "purchase_price": null,
+    "op_cost_per_min": 0.25,
+    "end_effector_cost_percent": 0.25
+  }
+}
