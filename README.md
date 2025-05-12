@@ -144,6 +144,6 @@ The engine annualises that figure, projects cumulative cost to the depreciation 
 
 ## 🙋‍♀️ Contributing / Questions
 
-* Feel free to ping me on [LinkedIn](https://linkedin.com/in/sidmehta).
+* Feel free to ping me on [LinkedIn](https://linkedin.com/in/sidmehta91).
 
 > _“LLMs are most useful when they **decide**, but don’t **guess** – the deterministic Python in between keeps them honest.”_
