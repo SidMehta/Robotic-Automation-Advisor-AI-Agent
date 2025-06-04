@@ -60,6 +60,15 @@ robotic-advisor/
 │           └── CostBenefitChart.js    # Cost-benefit analysis charts
 │
 ├── backend/                        # Python/Flask backend application
+|   ├── assets/                         # Shared assets and resources
+|      ├── urdfs/                      # Robot URDF definition files
+|      │   ├── atlas_convex_hull.urdf  # Example robot URDF
+|      │   ├── atlas_v4_with_multisense.urdf
+|      │   ├── digit_model.urdf
+|      │   ├── GGC_TestModel_rx78_20170112.urdf
+|      │   ├── jvrc1.urdf
+|      │   └── x1.urdf
+|      └── robot_metadata.json         # Robot financial and operational metadata
 │   ├── app.yaml                    # Google App Engine configuration for backend
 │   ├── requirements.txt            # Python dependencies
 │   ├── app.py                      # Flask application setup
@@ -72,58 +81,7 @@ robotic-advisor/
 │           ├── gemini_service.py   # Vertex AI Gemini API integration
 │           ├── urdf_service.py     # URDF file parsing and robot data
 │           └── robotics_analysis_service.py  # Core analysis orchestration
-│
-├── assets/                         # Shared assets and resources
-│   ├── urdfs/                      # Robot URDF definition files
-│   │   ├── atlas_convex_hull.urdf  # Example robot URDF
-│   │   ├── atlas_v4_with_multisense.urdf
-│   │   ├── digit_model.urdf
-│   │   ├── GGC_TestModel_rx78_20170112.urdf
-│   │   ├── jvrc1.urdf
-│   │   └── x1.urdf
-│   └── robot_metadata.json         # Robot financial and operational metadata
-│
-├── docs/                           # Documentation
-│   ├── architecture.svg            # System architecture diagram
-│   └── api.md                      # API documentation
-│
-├── .gitignore                      # Git ignore file
-├── README.md                       # Project README
-└── LICENSE                         # Project license
 ~~~
-
----
-
-## 🚀 Quick Start (local)
-
-> **Prereqs**  
-> • Node ≥ 18  
-> • Python ≥ 3.10  
-> • Vertex AI API enabled in your GCP project  
-> • Service‑account key or ADC credentials (`gcloud auth application-default login`)
-
-### 1. Backend
-
-~~~bash
-cd backend
-python -m venv .venv && source .venv/bin/activate
-pip install -r requirements.txt
-
-export GOOGLE_CLOUD_PROJECT=<gcp-project>
-export GEMINI_API_KEY=<vertex-api-key>  # or rely on ADC
-
-flask --app app run -p 8080
-~~~
-
-### 2. Frontend
-
-~~~bash
-cd frontend
-npm install
-npm start
-~~~
-
-Open **http://localhost:3000**, paste a `gs://` video URI, click **Analyse**.
 
 ---
 
@@ -142,7 +100,7 @@ The engine annualises that figure, projects cumulative cost to the depreciation 
 
 ---
 
-## 🙋‍♀️ Contributing / Questions
+## 🙋‍♀️ Questions
 
 * Feel free to ping me on [LinkedIn](https://linkedin.com/in/sidmehta91).
 
